@@ -39,14 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IBus.cs" />
-    <Compile Include="IEndpoint.cs" />
-    <Compile Include="IHandler.cs" />
-    <Compile Include="ILogger.cs" />
-    <Compile Include="IMessage.cs" />
-    <Compile Include="ISerializer.cs" />
-    <Compile Include="ITransport.cs" />
+    <Compile Include="Bus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SFBUS.Interfaces\SFBUS.Interfaces.csproj">
+      <Project>{9dc4ee13-e13c-4490-bd95-ec034b695e2e}</Project>
+      <Name>SFBUS.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

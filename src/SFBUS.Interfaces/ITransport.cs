@@ -9,11 +9,19 @@ namespace SFBUS.Interfaces
     public interface ITransport
     {
         /// <summary>
-        /// Retrieve next message from the endpoint
+        /// Start providing messages
         /// </summary>
-        /// <param name="endpoint">Endpoint to retrieve message from</param>
-        /// <returns></returns>
-        IMessage GetNextMessage(IEndpoint endpoint);
+        void Start();
+
+        /// <summary>
+        /// Stop providing messages
+        /// </summary>
+        void Stop();
+
+        /// <summary>
+        /// This delegate will be called when new message is retrieved
+        /// </summary>
+        Action<IMessage> ProvideMessage { get; set; }
 
         /// <summary>
         /// Send a message to the endpoint

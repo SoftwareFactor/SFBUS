@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1409.1722\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -51,6 +54,20 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BusTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SFBUS.Interfaces\SFBUS.Interfaces.csproj">
+      <Project>{9dc4ee13-e13c-4490-bd95-ec034b695e2e}</Project>
+      <Name>SFBUS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SFBUS\SFBUS.csproj">
+      <Project>{4d98227f-988c-47af-927a-b61f49eb66c8}</Project>
+      <Name>SFBUS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

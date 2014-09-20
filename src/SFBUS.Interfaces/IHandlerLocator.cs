@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SFBUS.Interfaces
 {
-    public interface IMessageDelegator
+    public interface IHandlerLocator
     {
-        IEndpoint DetermineEndpointForMessage(IMessage message);
+        IHandler<IMessage> LocateHandlerForMessage(IMessage message);
     }
 }

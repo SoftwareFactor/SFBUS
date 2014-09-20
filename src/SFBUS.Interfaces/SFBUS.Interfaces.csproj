@@ -39,6 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBus.cs" />
+    <Compile Include="IEndpoint.cs" />
+    <Compile Include="IHandler.cs" />
+    <Compile Include="IHandlerLocator.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="IMessage.cs" />
+    <Compile Include="IEndpointLocator.cs" />
+    <Compile Include="ISerializer.cs" />
+    <Compile Include="ITransport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
